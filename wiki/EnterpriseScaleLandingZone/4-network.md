@@ -6,6 +6,7 @@
 ::: query-table e2dd3d37-ba7d-499b-8377-49ab87d39929
 :::
 
+<font color="red">Remove this and the above line by first go into edit mode and replace it with insert ADO query and select **Network-tags** of the imported queries.</font>
 
 ## Introduction
 
@@ -45,6 +46,18 @@ The following scenarios are supported with this network design:
 Details van de connectiviteit subscription:
 
 ![Connectiviteit subscription](../media/connectiviteit.subscription.png)
+
+
+
+## DNS, Private DNS for PAAS
+
+In the Hybrid setup the DNS infrastructure on premise will be extended to the cloud so a virtual machine can resolve on-premise resources and vice versa.
+
+To make DNS resolving of PAAS services with private link available in other vNet and from on-premise the require Azure private DNS Zone will be centralized in the same subscription where the Azure DNS infrastructure will be deployed. 
+
+These DNS servers could be Domain Controllers in Azure, Linux DNS Forwarders or InfoBlox or other 3e party. These DNS server running in Azure must then be configured to forward resolution to the Azure provided DNS at 168.63.129.16 for every used paas services like database.windows.net. The vNet hosting this DNS services must be linked to every centralized private dns zone.
+
+Via policies the centralization of private link can be enforced see [link](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale)
 
 ### Network related Policies
 

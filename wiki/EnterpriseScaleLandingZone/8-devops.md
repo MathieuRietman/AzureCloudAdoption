@@ -5,6 +5,7 @@
 ::: query-table 72d6d597-085c-427b-825f-c16258da7688
 :::
 
+<font color="red">Remove this and the above line by first go into edit mode and replace it with insert ADO query and select **DevOps-tags** of the imported queries.</font>
 
 ## Central vs Application responsibilities
 
@@ -30,3 +31,10 @@ Central functions (Platform Ops)
 - Network management (including networks and network virtual appliances).
 - Security monitoring and audit (holistic).
 - Cost management (holistic).
+
+
+
+## Operationalize
+
+Consider adopting azOps for infrastructure as code deployment for the landingzone.
+see [Getting started with infrastructure-as-code](https://github.com/Azure/Enterprise-Scale/blob/main/docs/Deploy/getting-started.md)

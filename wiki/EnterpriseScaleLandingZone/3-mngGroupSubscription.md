@@ -15,7 +15,7 @@ Management Groups are used to set policies and RBAC.
 Policies and Management group overview: 
 
 
-![ <customer name> MG structure](../media/mg-structure.png)
+![ \<\<customer name\>\> MG structure](../media/mg-structure.png)
 
 #### Management groepen
 

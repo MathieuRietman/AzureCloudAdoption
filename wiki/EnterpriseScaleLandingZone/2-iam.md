@@ -5,7 +5,7 @@
 ::: query-table 2d0744ee-45ec-4ba5-bace-f7c52d56fde5
 :::
 
-
+<font color="red">Remove this and the above line by first go into edit mode and replace it with insert ADO query and select **IAM-tags** of the imported queries.</font>
 
 ## Introduction
 
@@ -14,11 +14,15 @@ Identity and access management (IAM) is boundary security in the public cloud. I
 ### Use Azure AD only groups for Azure controle plane.
 
 RBAC for Azure resource access is based on Azure Security Groups, instead of userid. No direct assignments should be done but Azure AD groups that implement the relevant role / RBAC.
-If necessary, create custom roles if subscription owner and network management must be separated from roles and responsibilities. See [link](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management)
-Set RBAC to Management group level for platform management like platform-owners, SecOps en NetOps.
-Advice is to use Privilege Identity Management for Azure resources (If the license is available).
+If necessary, create custom roles if subscription owner and network management must be separated from roles and responsibilities. See [link](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management). Create cloud only Azure AD groups for RBAC roles in Azure.
 
-Example. 
+
+Advice is to use Azure AD Privilege Identity Management for Azure resources (If the license is available) to ensure zero standing access for production environments across all Azure control plane access to ensure just-in-time control plane access to Azure Resources. 
+
+
+Set RBAC to Management group level for platform management like platform-owners, SecOps en NetOps.
+
+Some examples: 
 
 
 | Azure AD Group Name                    | Scope                    | PIM Role           |
@@ -47,8 +51,8 @@ Use sample Azure naming convention described on https://docs.microsoft.com/en-us
 
 [resource prefix ]-[optional Business Unit]-[ workload naam ] - [ deployment environment ] - [ region ] 
 
-Voorbeeld 
-| Type         | Benaming|
+Example 
+| Type         | Naming|
 |-----------------------------------|--------------------------|
 |Subscriptions | \<\<customer name>\>-prod-we |
 |Resourcegroup |rg-dataplatformnetwork-poc-we, rg-wvd-poc-we|
@@ -60,3 +64,4 @@ There are exceptions such as a storage account where one is not allowed to use h
 See naming rules  https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules 
 
 There are always exceptions to the rule, e.g. policy definitions in the enterprise scale do not have a prefix because they are only visible as a policy definition. 
+Allow deviation on the naming standards.

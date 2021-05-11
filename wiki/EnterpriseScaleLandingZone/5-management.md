@@ -6,6 +6,10 @@
 :::
 
 
+<font color="red">Remove this and the above line by first go into edit mode and replace it with insert ADO query and select **Manage-tags** of the imported queries.</font>
+
+
+
 ## Introduction
 
 The monitoring strategy is to use the services available in the Azure platform for logging, security and network monitoring. This means using the Azure native services such as Log Analytics, Monitor, Security Center, Sentinel and Network Watcher.

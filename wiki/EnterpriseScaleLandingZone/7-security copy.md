@@ -5,21 +5,21 @@
 ::: query-table 30631937-2cfb-4e31-8f4c-ba3db6d8512b
 :::
 
-
 <font color="red">Remove this and the above line by first go into edit mode and replace it with insert ADO query and select **Security-tags** of the imported queries.</font>
+
 
   
 ## Introduction
 
-Security will be largely implemented through policy-driven management. The proposed  \<\<customer name>\>'s policies ensure that new subscriptions and resources immediately comply with the compliant state. By using "deployIfNotExists", "deny", "append", and "modify" the Azure resources are made compliant with regard to the Azure platform (Logging, Public Endpoints, Agent install etc).
+Security will be largely implemented through policy-driven management. The proposed ssc 's policies ensure that new subscriptions and resources immediately comply with the compliant state. By using "deployIfNotExists", "deny", "append", and "modify" the Azure resources are made compliant with regard to the Azure platform (Logging, Public Endpoints, Agent install etc).
 
-- With "deployIfNotExist" policies,   \<\<customer name\>\> IaaS and PaaS resources, as well as new subscriptions, resources become compliant when created regardless of how they were created.
+- With "deployIfNotExist" policies,  ssc IaaS and PaaS resources, as well as new subscriptions, resources become compliant when created regardless of how they were created.
 
-- With the "deny" policies,   \<\<customer name\>\> ensures that there is no misconfiguration. This will cause the deployment to fail and thus prevent non-compliant resource configurations from occurring
+- With the "deny" policies,  ssc ensures that there is no misconfiguration. This will cause the deployment to fail and thus prevent non-compliant resource configurations from occurring
   
 - With "append" policies, necessary tags are added to resources without user interaction, eg for appropriate cost center tags.
 
-- With the "modify" policies,   \<\<customer name\>\> changes can be made to resource tags
+- With the "modify" policies,  ssc changes can be made to resource tags
 
 Advice is to start with "audit" and "auditIfNotExists" policies to understand current status and compliance, and deploy if not exist for agents and monitoring configurations.
 
@@ -38,25 +38,25 @@ The following security policies and governance are used:
 <tr>
 <td>Enforce Azure Security Center</td>
 <td>Deploy ASC on every Azure subscription</td>
-<td>  \<\<customer name\>\> management group</td>
+<td> ssc management group</td>
 <td>All subscriptions will have ASC enabled when they are created</td>
 </tr>
 <tr>
 <td>Enforce Azure Security Monitoring</td>
 <td>Enable ASC monitoring on every subscription</td>
-<td>  \<\<customer name\>\> management group</td>
+<td> ssc management group</td>
 <td>All subscriptions will have all the security monitors enabled</td>
 </tr>
 <tr>
 <td>Enforce Azure Security Center alerts</td>
 <td>Enforce consumption of ASC alerts</td>
-<td>  \<\<customer name\>\> management group</td>
+<td> ssc management group</td>
 <td>All subscriptions will have ASC alerts exported to platform Log Analytics workspace</td>
 </tr>
 <tr>
 <td>Enforce audit of KeyVault</td>
 <td>Ensure logging is enabled for Key Vault</td>
-<td>  \<\<customer name\>\> management group</td>
+<td> ssc management group</td>
 <td>All Key Vaults will have logging enabled, and stored centrally to Log Analytics workspace</td>
 </tr>
 <tr>
@@ -81,8 +81,8 @@ The following security policies and governance are used:
 <tr>
 <td>Enforce Key Vault recovery</td>
 <td>Ensure Key Vault objects can be recoverable</td>
-<td>  \<\<customer name\>\> management group</td>
-<td>All Key Vault objects are recoverable in   \<\<customer name\>\> tenant</td>
+<td> ssc management group</td>
+<td>All Key Vault objects are recoverable in  ssc tenant</td>
 </tr>
 <tr>
 <td><p>Enforce Private Link for  Azure Services </p>
