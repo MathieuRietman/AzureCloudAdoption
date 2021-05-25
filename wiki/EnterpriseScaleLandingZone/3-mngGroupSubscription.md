@@ -2,12 +2,11 @@
 
 ## List of related features and user stories in the backlog
 
-- #6509
-- #6510
-- #6515
-- #6518
-- #6520
-- #6519
+
+::: query-table 2d0744ee-45ec-4ba5-bace-f7c52d56fde5
+:::
+
+<font color="red">Remove this and the above line by first go into edit mode and replace it with insert ADO query and select **mngSubscription-tags** of the imported queries.</font>
 
 ## Introduction
 

@@ -5,7 +5,7 @@
 ::: query-table ce043274-fd00-4a24-9273-31902c032c2f
 :::
 
-
+<font color="red">Remove this and the above line by first go into edit mode and replace it with insert ADO query and select **SubscriptionAutomation-tags** of the imported queries.</font>
 ## Implementation
 
 ## links

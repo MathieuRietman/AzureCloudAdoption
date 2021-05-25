@@ -5,6 +5,7 @@
 ::: query-table 897e1122-7a9d-4f99-b46e-ea5b09f11458
 :::
 
+<font color="red">Remove this and the above line by first go into edit mode and replace it with insert ADO query and select **manage-tags** of the imported queries.</font>
 
 ## Introduction
 
